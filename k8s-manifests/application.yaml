@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: application-service
+  labels:
+    app: application-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: application-service
+  template:
+    metadata:
+      labels:
+        app: application-service
+    spec:
+      containers:
+      - name: hcl-hackathon
+        image: docker.io/abhishekrampati/application-service:latest  # Replace with your Docker image path
+        ports:
+        - containerPort: 3000

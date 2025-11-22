@@ -1,0 +1,14 @@
+FROM node:13-alpine
+
+
+WORKDIR /app
+COPY ./src /app
+
+# set default dir so that next commands executes in /home/app dir
+WORKDIR /app
+
+# will execute npm install in /home/app because of WORKDIR
+RUN npm install --production
+
+# no need for /home/app/server.js because of WORKDIR
+ENTRYPOINT ["node", "index.js"]

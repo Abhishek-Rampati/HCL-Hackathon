@@ -9,4 +9,7 @@ terraform {
 
 provider "google" {
   # Configuration options
+  project = "myservicedemoproject"
+  region = "asia-south1"
+  
 }

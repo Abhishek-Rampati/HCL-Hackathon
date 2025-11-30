@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: hcl-hackathon
-        image: docker.io/abhishekrampati/application-service:latest  # Replace with your Docker image path
+        image: docker.io/abhishekrampati/hclhackathon:latest  # Replace with your Docker image path
         ports:
-        - containerPort: 3000
+        - containerPort: 3001
